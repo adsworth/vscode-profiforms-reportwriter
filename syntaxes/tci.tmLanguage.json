@@ -1,0 +1,73 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Profiforms TCI",
+	"scopeName": "source.tci",
+	"patterns": [
+		{ "include": "#include_section"},
+		{ "include": "#comment" },
+		{ "include": "#named_objects"},
+		{ "include": "#unnamed_objects"},
+		{ "include": "#strings" },
+		{ "include": "#keywords_functions" },
+		{ "include": "#keywords_docdef" },
+		{ "include": "#keywords_workitem" },
+		{ "include": "#keywords_commonsettings" },
+		{ "include": "#keywords_subform" },
+		{ "include": "#keywords_table" }
+	  ],
+	"repository": {
+	  "strings": {
+		  "name": "string.quoted.double.single-line.tci",
+		  "begin": "\\\"",
+		  "end": "\\\"",
+		  "comment": "Strings"
+		},
+	  "comment": {
+		  "name": "comment.line.tci",
+		  "match": "^\\*.*$",
+		  "comment": "Comment"
+		},
+	  "keywords_docdef": {
+		"name": "keyword.control.tci",
+		"match":"(?i)\\b(FormFileName|Copy|Printer|DocRef|Archive|Print|SourceCopy|WorkItems|WorkListVariant|DocRefFields|JoinKey|SortKey|MaterialExchangeSet|AutoPositioning|Rec|Qualifier|XMLOutput|SupplementWorkItem)\\b"
+	  },
+	  "keywords_subform": {
+		"name": "keyword.control.tci",
+		"match":"(?i)\\b(Designs|DoPrint|Fields|Height|Label|LineWrap|Name|PageBottomPosition|PageBreak|PageTopPosition|Protect|Recognition|Reserve|Table|TableControl|TopGap|WrapTable)\\b"
+	  },
+	  "keywords_table": {
+		"name": "keyword.control.tci",
+		"match":"(?i)\\b(Protect|PageBottomJoinedPosition|PageTopJoinedPosition)\\b"
+	  },
+	  "keywords_workitem": {
+		"name": "keyword.control.tci",
+		"match":"(?i)\\b(Archive|ArchiveDesignsFirst|ArchiveDesignsNext|ArchiveText|ArcPDFProfile|ArcRefFields|ArcVolFields|BackPageDesignsFirst|BackPageDesignsNext|BackPageFirst|BackPageNext|Central|ContinuationTextBackPage|ContinuationTextPage|ContributionFileName|Copy|CopyText|DataBind|DesignsFirst|DesignsNext|DoNotCountPages|DuplexFirst|DuplexNext|EmbeddedFiles|ESSFields|FinishingFirst|FinishingNext|FirstPage|FormFileName|GutterFirst|GutterNext|HeaderFields|HeaderWorkItem|IndicantFields|IndicantWorkItem|IntrayFirst|IntrayNext|JoinBefore|Layout|LayoutElement|MaterialFirst|MaterialNext|NextPage|OuttrayFirst|OuttrayNext|PageDescriptorFirst|PageDescriptorNext|PageReverser|PaperTypeFirst|PaperTypeNext|PDFFields|PDFImportDocuments|PDFImportType|PDFProfile|Positions|Print|Printer|ResourceFileName|RotateToFirst|RotateToNext|TrailerFields|TrailerWorkItemName|VolFields|WIFields)\\b"
+	  },
+	  "keywords_commonsettings": {
+		"name": "keyword.control.tci",
+		"match":"(?i)\\b(SeparateCentralChannels|SeparateCentralQualifiers|SeparateCentralIncompatiblePaperTypes|SeparateCentralMaximumPages|SeparateArchiveMaximumDocs|SeparateCentralSimplex|SeparateArchiveMaximumDocs|SeparateArchiveDocType|SeparateArchiveFileSize|ArchiveBackPages|ArchiveDuplexFillup|ArchiveSinglePages|ArchiveFileType|StrictlyCentralCheck|TrimFields|PostalService|AutoProtectTables|RemoveEmptyTables|JetFormGroupCompatible|PageBreakSpaceEfficiency ValueSortAllOutputDocuments|IgnoreUndefinedPositions|OutFileDocRefFields|OutFileSAPRefFields|OutFileDocRefHeader|OutFileSAPRefHeader|ResolveEntities|ResolveInlineEntities|DecentralRefFiles|MaxJoinWeight|UseJoinKeyAsDocRef|IndicantOnlyForFirstSpoolInSeries|DuplexReduction|CancelOnInsertionMismatch|IncludeDescriptionInPaperConsumption|AlignPaperTypeWithMaterial|AlignIntrayWithMaterial)\\b"
+	  },
+	  "keywords_functions": {
+		"name": "entity.name.function.tci",
+		"match":"(?i)\\b(AddDate|AddF|AddI|Address|And|At|BuildChartTable|CheckGermanCountry|CheckGermanZIP|ClearBitI|ClearS|ConcatS|ConvertVarsInFile|CopyFields|DirectoryCreate|DirectoryDelete|DivideF|DivideI|DPDVFrei|EmptyS|Exit|FieldEntryExists|FileCopy|FileDelete|FileExists|FileMove|FillS|FormatF|GetBitI|GetCityFromAddress|GetCountryFromAddress|GetHouseNoFromAddress|GetNameLinesFromAddress|GetPagesInDocument|GetPagesInPDFFile|GetSheetsInDocument|GetStreetFromAddress|GetSubstitute|GetUUID|GetZIPFromAddress|GroupExists|HexStrings|If|IndexS|IsEqualF|IsEqualI|IsEqualS|IsGreaterF|IsGreaterI|IsGreaterS|IsLessF|IsLessI|IsLessS|IsNullF|IsNullI|IsNullS|LengthS|Modulo10R|ModuloI|MoveFields|MultiplyF|MultiplyI|Nand|Nor|NormalizeF|Not|NowS|OMR|Or|PlaceholderS|PositionEntryDelete|PositionEntryExists|PositionEntryValue|PositionExists|Program|RandomI|RandomS|ReadVarsFromFile|RemoveAllS|ReplaceAllS|RoundF|SepSign|SetAt|SetBitI|StartPointS|StretchS|SubS|SubtracDate|SubtracF|SubtracI|Tokenizer|TokenS|ToLowerS|ToUpperS|Trace|TrimS|WriteAllGlobalVarsToFile|WriteAllLocalVarsToFile|WriteDocAsXML|WriteGlobalVarsToFile|WriteLocalVarsToFile)\\b"
+	  },
+	  "named_objects":{
+		  "match" : "(?i)(DocDef|HeaderSubForm|PageBottomSubForm|PageTopSubForm|Position|Substitute|Table|TrailerSubForm|Workitem)\\s+([\\|a-zA-Z0-9_]+)\\s+{",
+		  "captures":{
+			"1": { "name": "keyword.other.control.tci" },
+			"2": { "name": "entity.name.type.tci" }
+		  }
+	  },
+	  "unnamed_objects":{
+		"name": "keyword.control.tci",
+		"match" : "(?i)\\b(AfterCalc|BeforeCalc|Calc|Concalc|CommonSettings|DocRec|EnvelopeSortSystem|Grouping|PageCalc|Positioning|Recognition|SubForm)\\b"
+	  },
+	  "include_section":{
+		  "match": "(?i)^\\*(include|sectionstart|sectionstop)\\s([\\w\\.]+)",
+		  "captures":{
+			"1": { "name": "keyword.other.control.tci" },
+			"2": { "name": "entity.name.type.tci" }
+		  }
+	  }
+  }
+}

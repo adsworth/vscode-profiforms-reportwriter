@@ -1,0 +1,27 @@
+{
+    "name": "profiforms-tci",
+    "displayName": "Profiforms ReportWriter TCI",
+    "description": "Profiforms ReportWriter configuration files",
+    "publisher": "Adi J. Sieker",
+    "repository":"https://",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+    "languages": [{
+        "id": "tci",
+        "aliases": ["Profiforms ReportWriter TCI", "tci"],
+        "extensions": [".tci",".inc"],
+        "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+        "language": "tci",
+        "scopeName": "source.tci",
+        "path": "./syntaxes/tci.tmLanguage.json"
+    }]
+    }
+}
