@@ -1,9 +1,10 @@
 {
-    "name": "profiforms-tci",
+    "name": "profiforms-reportwriter",
     "displayName": "Profiforms ReportWriter TCI",
-    "description": "Profiforms ReportWriter configuration files",
+    "description": "Syntax grammar for the Profiforms ReportWriter configuration files",
     "publisher": "Adi J. Sieker",
-    "repository":"https://",
+    "repository":"https://github.com/adsworth/vscode-profiforms-reportwriter",
+    "icon":"images/logo.png",
     "version": "1.0.0",
     "engines": {
         "vscode": "^1.65.0"
