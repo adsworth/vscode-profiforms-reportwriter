@@ -52,7 +52,7 @@
 		"match":"(?i)\\b(AddDate|AddF|AddI|Address|And|At|BuildChartTable|CheckGermanCountry|CheckGermanZIP|ClearBitI|ClearS|ConcatS|ConvertVarsInFile|CopyFields|DirectoryCreate|DirectoryDelete|DivideF|DivideI|DPDVFrei|EmptyS|Exit|FieldEntryExists|FileCopy|FileDelete|FileExists|FileMove|FillS|FormatF|GetBitI|GetCityFromAddress|GetCountryFromAddress|GetHouseNoFromAddress|GetNameLinesFromAddress|GetPagesInDocument|GetPagesInPDFFile|GetSheetsInDocument|GetStreetFromAddress|GetSubstitute|GetUUID|GetZIPFromAddress|GroupExists|HexStrings|If|IndexS|IsEqualF|IsEqualI|IsEqualS|IsGreaterF|IsGreaterI|IsGreaterS|IsLessF|IsLessI|IsLessS|IsNullF|IsNullI|IsNullS|LengthS|Modulo10R|ModuloI|MoveFields|MultiplyF|MultiplyI|Nand|Nor|NormalizeF|Not|NowS|OMR|Or|PlaceholderS|PositionEntryDelete|PositionEntryExists|PositionEntryValue|PositionExists|Program|RandomI|RandomS|ReadVarsFromFile|RemoveAllS|ReplaceAllS|RoundF|SepSign|SetAt|SetBitI|StartPointS|StretchS|SubS|SubtracDate|SubtracF|SubtracI|Tokenizer|TokenS|ToLowerS|ToUpperS|Trace|TrimS|WriteAllGlobalVarsToFile|WriteAllLocalVarsToFile|WriteDocAsXML|WriteGlobalVarsToFile|WriteLocalVarsToFile)\\b"
 	  },
 	  "named_objects":{
-		  "match" : "(?i)(DocDef|HeaderSubForm|PageBottomSubForm|PageTopSubForm|Position|Substitute|Table|TrailerSubForm|Workitem)\\s+([\\|a-zA-Z0-9_]+)\\s+{",
+		  "match" : "(?i)(DocDef|HeaderSubForm|PageBottomSubForm|PageTopSubForm|Position|Substitute|Table|TrailerSubForm|Workitem)\\s+([\\|a-zA-Z0-9_#]+)\\s+{",
 		  "captures":{
 			"1": { "name": "keyword.other.control.tci" },
 			"2": { "name": "entity.name.type.tci" }
