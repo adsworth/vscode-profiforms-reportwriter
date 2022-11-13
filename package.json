@@ -2,9 +2,9 @@
     "name": "profiforms-reportwriter",
     "displayName": "Profiforms ReportWriter TCI",
     "description": "Syntax grammar for the Profiforms ReportWriter configuration files",
-    "publisher": "Adi J. Sieker",
-    "repository":"https://github.com/adsworth/vscode-profiforms-reportwriter",
-    "icon":"images/logo.png",
+    "publisher": "adsworth",
+    "repository": "https://github.com/adsworth/vscode-profiforms-reportwriter",
+    "icon": "images/logo.png",
     "version": "1.0.0",
     "engines": {
         "vscode": "^1.65.0"
@@ -13,16 +13,26 @@
         "Programming Languages"
     ],
     "contributes": {
-    "languages": [{
-        "id": "tci",
-        "aliases": ["Profiforms ReportWriter TCI", "tci"],
-        "extensions": [".tci",".inc"],
-        "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-        "language": "tci",
-        "scopeName": "source.tci",
-        "path": "./syntaxes/tci.tmLanguage.json"
-    }]
+        "languages": [
+            {
+                "id": "tci",
+                "aliases": [
+                    "Profiforms ReportWriter TCI",
+                    "tci"
+                ],
+                "extensions": [
+                    ".tci",
+                    ".inc"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tci",
+                "scopeName": "source.tci",
+                "path": "./syntaxes/tci.tmLanguage.json"
+            }
+        ]
     }
 }
